@@ -88,7 +88,7 @@ def third_question():
 @app.route('/genre')
 def get_house():
     """presents the genre quiz results"""
-    return 'congratulations, you are in ' + genre_values.sort() + '!'
+    return 'congratulations, the genre taht most fits you right now is ' + genre_values.sort() + '!'
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8081)
