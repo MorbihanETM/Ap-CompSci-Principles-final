@@ -66,7 +66,7 @@ def second_question():
 
 @app.route('/question/3', methods = ['GET', 'POST'])
 def third_question():
-    """What is your favorite fower?"""
+    """What is your favorite flower?"""
     answers = ['orange tulips', 'red roses', 'lavender', 'daisies']
 
     if request.method == 'GET':
@@ -87,7 +87,7 @@ def third_question():
 
 @app.route('/genre')
 def get_house():
-    """presents the house quiz results"""
+    """presents the genre quiz results"""
     return 'congratulations, you are in ' + genre_values.sort() + '!'
 
 if __name__ == '__main__':
