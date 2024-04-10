@@ -83,7 +83,49 @@ def third_question():
         if selected == answers[3]:
             genre_values.add('classical')
 
-        return redirect('/genre')
+        return redirect('/question/4')
+
+@app.route('/question/4', methods = ['GET', 'POST'])
+def fourth_question():
+    """what do you prefer?"""
+    answers = ['going out on walks with friends', 'getting a coffee with a good book', 'making abstract art with loud music in your ears', 'taking a nap']
+
+    if request.method == 'GET':
+        return render_template('question_4.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            genre_values.add('pop')
+        if selected == answers[1]:
+            genre_values.add('jazz')
+        if selected == answers[2]:
+            genre_values.add('electropop')
+        if selected == answers[3]:
+            genre_values.add('classical')
+
+        return redirect('/question/5')
+
+@app.route('/question/5', methods = ['GET', 'POST'])
+def fifth_question():
+    """Do you want to be a..."""
+    answers = ['celebrity', 'author', 'artist', 'scientist']
+
+    if request.method == 'GET':
+        return render_template('question_5.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            genre_values.add('pop')
+        if selected == answers[1]:
+            genre_values.add('jazz')
+        if selected == answers[2]:
+            genre_values.add('electropop')
+        if selected == answers[3]:
+            genre_values.add('classical')
+    
+    return redirect('/genre')
 
 @app.route('/genre')
 def get_house():
