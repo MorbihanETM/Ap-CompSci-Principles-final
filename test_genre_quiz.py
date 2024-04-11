@@ -1,11 +1,11 @@
-from formula_one_quiz import GenreQuiz
+from formula_one_quiz import FormulaOne
 
 
 def test_genre_quiz():
-    quiz = GenreQuiz(0,0,0,0)
-    quiz.add('pop')
-    assert quiz.sort() == 'pop'
+    quiz = FormulaOne(0,0,0,0)
+    quiz.add('Max Verstappen')
+    assert quiz.sort() == 'Max Verstappen'
     
 def test_genre_quiz_equality():
-    quiz = GenreQuiz(1,1,1,0)
+    quiz = FormulaOne(1,1,1,0)
     assert quiz.sort() == 'electropop'
