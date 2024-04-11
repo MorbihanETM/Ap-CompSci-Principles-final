@@ -1,4 +1,4 @@
-from genre_quiz import GenreQuiz
+from formula_one_quiz import GenreQuiz
 
 
 def test_genre_quiz():
