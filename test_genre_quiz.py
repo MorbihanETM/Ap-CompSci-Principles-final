@@ -7,5 +7,5 @@ def test_genre_quiz():
     assert quiz.sort() == 'Max Verstappen'
     
 def test_genre_quiz_equality():
-    quiz = FormulaOne(1,1,1,0)
-    assert quiz.sort() == 'electropop'
+    quiz = FormulaOne(3,1,1,0)
+    assert quiz.sort() == 'Max Verstappen'

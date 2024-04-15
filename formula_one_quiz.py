@@ -22,6 +22,7 @@ class FormulaOne:
         result = ''
         for driver, points in self.driver.items():
             if points > score:
+                score = points
                 result = driver
 
         return result
