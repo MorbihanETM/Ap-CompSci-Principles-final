@@ -28,7 +28,7 @@ class FormulaOne:
         return result
 
     def clear(self) -> None:
-        self.genre = {
+        self.driver = {
             'Max Verstappen': 0,
             'Charles Leclerc': 0,
             'Lando Norris': 0,
