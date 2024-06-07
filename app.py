@@ -3,7 +3,7 @@ from formula_one_quiz import FormulaOne
 
 app = Flask(__name__)
 
-driver_values = FormulaOne(0, 0, 0, 0)
+driver_values = FormulaOne(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 IMG_DIR = './static'
 
@@ -44,7 +44,8 @@ def first_question():
 
 @app.route('/question/2', methods = ['GET', 'POST'])
 def second_question():
-    answers = ['on the dance floor', 'at a coffee shop', 'playing video games', 'at home']
+    answers = ['on the dance floor', 'at a coffee shop', 'playing video games',
+                'at home']
 
     if request.method == 'GET':
         return render_template('question_2.html', answers = answers)
