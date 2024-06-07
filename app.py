@@ -5,14 +5,6 @@ app = Flask(__name__)
 
 driver_values = FormulaOne(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-IMG_DIR = './static'
-
-
-# @app.route('/image')
-# def serve_image():
-#     "a simple HTTP image"
-#     return render_template('image.html')
-
 @app.route('/values')
 def values():
     return list(driver_values.driver.items())
@@ -33,19 +25,34 @@ def first_question():
         selected = request.form['selected']
         if selected == answers[0]:
             driver_values.add('Max Verstappen')
+            driver_values.add('Esteban Ocon')
+            driver_values.add('Kevin Magnussen')
+            driver_values.add('Fernando Alonso')
+            driver_values.add('Alexander Albon')
         if selected == answers[1]:
             driver_values.add('Charles Leclerc')
+            driver_values.add('Logan Sargeant')
+            driver_values.add('Zhou Guanyu')
+            driver_values.add('George Russell')
+            driver_values.add('Lance Stroll')
         if selected == answers[2]:
             driver_values.add('Lando Norris')
+            driver_values.add('Daniel Ricciardo')
+            driver_values.add('Carlos Sainz')
+            driver_values.add('Nico Hulkenberg')
+            driver_values.add('Yuki Tsunoda')
         if selected == answers[3]:
             driver_values.add('Fernando Alonso')
-
+            driver_values.add('Lewis Hamilton')
+            driver_values.add('Valterri Bottas')
+            driver_values.add('Pierre Gasly')
+            driver_values.add('Oscar Piastri')
         return redirect('/question/2')
 
 @app.route('/question/2', methods = ['GET', 'POST'])
 def second_question():
     answers = ['on the dance floor', 'at a coffee shop', 'playing video games',
-                'at home']
+                'at the gym']
 
     if request.method == 'GET':
         return render_template('question_2.html', answers = answers)
@@ -54,12 +61,28 @@ def second_question():
         selected = request.form['selected']
         if selected == answers[0]:
             driver_values.add('Max Verstappen')
+            driver_values.add('Daniel Ricciardo')
+            driver_values.add('Valterri Bottas')
+            driver_values.add('Lando Norris')
+            driver_values.add('Carlos Sainz')
         if selected == answers[1]:
             driver_values.add('Charles Leclerc')
+            driver_values.add('George Russell')
+            driver_values.add('Oscar Piastri')
+            driver_values.add('Yuki Tsunoda')
+            driver_values.add('Alexander Albon')
         if selected == answers[2]:
-            driver_values.add('Lando Norris')
+            driver_values.add('Zhou Guanyu')
+            driver_values.add('Esteban Ocon')
+            driver_values.add('Sergio Perez')
+            driver_values.add('Nico Hulkenberg')
+            driver_values.add('Kevin Magnussen')
         if selected == answers[3]:
             driver_values.add('Fernando Alonso')
+            driver_values.add('Pierre Gasly')
+            driver_values.add('Lewis Hamilton')
+            driver_values.add('Logan Sargeant')
+            driver_values.add('Lance Stroll')
 
         return redirect('/question/3')
 
@@ -74,12 +97,28 @@ def third_question():
         selected = request.form['selected']
         if selected == answers[0]:
             driver_values.add('Max Verstappen')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[1]:
             driver_values.add('Charles Leclerc')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[2]:
             driver_values.add('Lando Norris')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[3]:
             driver_values.add('Fernando Alonso')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
 
         return redirect('/question/4')
 
@@ -94,12 +133,28 @@ def fourth_question():
         selected = request.form['selected']
         if selected == answers[0]:
             driver_values.add('Max Verstappen')
+            driver_values.add('Esteban Ocon')
+            driver_values.add('Kevin Magnussen')
+            driver_values.add('Yuki Tsunoda')
+            driver_values.add('Oscar Piastri')
         if selected == answers[1]:
             driver_values.add('Charles Leclerc')
+            driver_values.add('George Russell')
+            driver_values.add('Alexander Albon')
+            driver_values.add('Zhou Guanyu')
+            driver_values.add('Nico Hulkenberg')
         if selected == answers[2]:
             driver_values.add('Lando Norris')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[3]:
             driver_values.add('Fernando Alonso')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
 
         return redirect('/question/5')
 
@@ -114,12 +169,28 @@ def fifth_question():
         selected = request.form['selected']
         if selected == answers[0]:
             driver_values.add('Max Verstappen')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[1]:
             driver_values.add('Charles Leclerc')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[2]:
             driver_values.add('Lando Norris')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
         if selected == answers[3]:
             driver_values.add('Fernando Alonso')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
+            driver_values.add('Max')
     
     return redirect('/genre')
 
