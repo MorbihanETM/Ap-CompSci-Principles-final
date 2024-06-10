@@ -1,3 +1,5 @@
+import random
+
 class FormulaOne:
     def __init__(self, max_verstappen: int, charles_leclerc: int, lando_norris: int, fernando_alonso: int, sergio_perez: int, carlos_sainz: int, oscar_piastri: int, lance_stroll: int, george_russell: int, lewis_hamilton: int, daniel_ricciardo: int, yuki_tsunoda: int, logan_sargeant: int, alexander_albon: int, nico_hulkenberg: int, kevin_magnussen: int, pierre_gasly: int, esteban_ocon: int, valterri_bottas: int, zhou_guanyu: int):
         self.driver = {
@@ -69,12 +71,19 @@ class FormulaOne:
     def sort(self) -> str:
         score = 0
         result = ''
+        ties = []
         for driver, points in self.driver.items():
             if points > score:
-                score = points
                 result = driver
+                score = points
+            elif points == score:
+                ties.append(driver)
 
-        return result
+        if len(ties) == 0:
+            return result
+
+        print('ties: ' + str(ties))
+        return ties[random.randint(0, len(ties) - 1)]
 
     def clear(self) -> None:
         self.driver = {
