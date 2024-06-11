@@ -193,6 +193,189 @@ def fifth_question():
             driver_values.add('Sergio Perez')
             driver_values.add('Nico Hulkenberg')
     
+        return redirect('/question/6')
+
+@app.route('/question/6', methods = ['GET', 'POST'])
+def sixth_question():
+# What is your preferred love language?
+    answers = ['gift giving' ,'quality time', 'physical touch', 'what is love?']
+
+    if request.method == 'GET':
+        return render_template('question_6.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            driver_values.add('Lewis Hamilton')
+            driver_values.add('Charles Leclerc')
+            driver_values.add('Nico Hulkenberg')
+            driver_values.add('George Russell')
+            driver_values.add('Fernando Alonso')
+        if selected == answers[1]:
+            driver_values.add('Carlos Sainz')
+            driver_values.add('Pierre Gasly')
+            driver_values.add('Logan Sargeant')
+            driver_values.add('Zhou Guanyu')
+            driver_values.add('Yuki Tsunoda')
+        if selected == answers[2]:
+            driver_values.add('Daniel Ricciardo')
+            driver_values.add('Max Verstappen')
+            driver_values.add('Lando Norris')
+            driver_values.add('Alexander Albon')
+            driver_values.add('Oscar Piastri')
+        if selected == answers[3]:
+            driver_values.add('Lance Stroll')
+            driver_values.add('Valterri Bottas')
+            driver_values.add('Kevin Magnussen')
+            driver_values.add('Esteban Oon')
+            driver_values.add('Sergio Perez')
+    
+    return redirect('/question/7')
+
+@app.route('/question/7', methods = ['GET', 'POST'])
+def seventh_question():
+#    
+    answers = ['', '', '', '']
+
+    if request.method == 'GET':
+        return render_template('question_7.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[1]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[2]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[3]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+    
+    return redirect('/question/8')
+    
+@app.route('/question/8', methods = ['GET', 'POST'])
+def eighth_question():
+    answers = []
+
+    if request.method == 'GET':
+        return render_template('question_8.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[1]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[2]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[3]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+    
+    return redirect('/question/9')
+
+@app.route('/question/9', methods = ['GET', 'POST'])
+def ninth_question():
+    answers = []
+
+    if request.method == 'GET':
+        return render_template('question_9.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[1]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[2]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[3]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+    
+    return redirect('/question/10')
+
+@app.route('/question/10', methods = ['GET', 'POST'])
+def tenth_question():
+    answers = []
+
+    if request.method == 'GET':
+        return render_template('question_10.html', answers = answers)
+
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[1]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[2]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+        if selected == answers[3]:
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+            driver_values.add('')
+    
+    return redirect('/question/')
     return redirect('/genre')
 
 @app.route('/genre')
