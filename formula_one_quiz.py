@@ -1,5 +1,6 @@
 import random
 
+# Create class that initializes each driver
 class FormulaOne:
     def __init__(self, max_verstappen: int, charles_leclerc: int, lando_norris: int, fernando_alonso: int, sergio_perez: int, carlos_sainz: int, oscar_piastri: int, lance_stroll: int, george_russell: int, lewis_hamilton: int, daniel_ricciardo: int, yuki_tsunoda: int, logan_sargeant: int, alexander_albon: int, nico_hulkenberg: int, kevin_magnussen: int, pierre_gasly: int, esteban_ocon: int, valterri_bottas: int, zhou_guanyu: int):
         self.driver = {
@@ -26,6 +27,7 @@ class FormulaOne:
 
         }
 
+# Create function that adds a point to driver when said driver is selected
     def add(self, driver: str) -> None:
         if driver == 'Max Verstappen':
             self.driver['Max Verstappen'] = self.driver.get('Max Verstappen') + 1
@@ -68,10 +70,12 @@ class FormulaOne:
         if driver == 'Zhou Guanyu':
             self.driver['Zhou Guanyu'] = self.driver.get('Zhou Guanyu') + 1
             
+# Create function that sorts the driver values in order to return driver with most points
     def sort(self) -> str:
         score = 0
         result = ''
         ties = []
+# Create tie breaker
         for driver, points in self.driver.items():
             if points > score:
                 result = driver
@@ -85,6 +89,7 @@ class FormulaOne:
         print('ties: ' + str(ties))
         return ties[random.randint(0, len(ties) - 1)]
 
+# Create a function that sets all driver values to 0
     def clear(self) -> None:
         self.driver = {
             'Max Verstappen': 0,
