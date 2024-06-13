@@ -315,6 +315,7 @@ def eighth_question():
 
     return redirect('/genre')
 
+# Create web location that returns results
 @app.route('/genre')
 def get_house():
     return 'congratulations, the formula 1 driver that most fits you is ' + driver_values.sort() + '!'
